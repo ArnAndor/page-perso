@@ -1,0 +1,128 @@
+/* Page personnelle — styles.
+   Mardi : typographie, couleurs, espacements (« CSS from scratch »).
+   Jeudi : mise en page mobile first avec Flexbox ou Grid (« Layout Lab »). */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+:root {
+   /* palete de couleur*/
+  --couleur-texte: #f0f2f2cc;
+  --couleur-fond: #28344e;
+  --couleur-accent: #7e3b3b;
+  --couleur-discrete: #777880;
+  /*echelle d'éspasment*/
+  --espace-1: 0.25rem;
+  --espace-2: 0.5rem;
+  --espace-3: 1rem;
+  --espace-4: 1.5rem;
+  --espace-5: 2.5rem; 
+  /*echelle tipographique*/
+  --texte-petit: 0.875rem;
+  --texte-normal: 1rem;
+  --texte-grand: 1.25rem;
+  --texte-titre: 2rem;
+}  
+body {
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   color: var(--couleur-texte);
+   background: var(--couleur-fond);
+   margin: var(--espace-5);
+}
+.menu {
+   display: flex;
+   align-items: center;
+   position: fixed;
+   bottom: 0;
+   width: 100%;
+   left: 0;
+   background-color: var(--couleur-texte);
+   padding: var(--espace-2) var(--espace-3);
+   color: var(--couleur-fond);
+}
+.lien {
+   list-style: none;
+   display: flex;
+   gap: var(--espace-3);
+   justify-content: space-between;
+   width: 100%;
+   margin: 0;
+   padding: 0;
+}
+.icone {
+   display: inline-block;
+   width: 24px;
+   height: 24px;
+   background-color: var(--couleur-fond);
+   mask-size: contain;
+   mask-repeat: no-repeat;
+   mask-position: center;
+}
+.icone-accueil {
+   mask-image: url("img/icon/Accueil.svg");
+}
+.icone-projets {
+   mask-image: url("img/icon/Projets.svg");
+}
+.icone-contact {
+   mask-image: url("img/icon/Contact.svg");
+}
+.icone-info {
+   mask-image: url("img/icon/À_propos.svg");
+}
+a:hover {
+   color: var(--couleur-accent);
+}
+.icone:hover {
+   background-color: var(--couleur-accent);
+}
+main {
+   padding-bottom: var(--espace-3);
+}
+.encadre {
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+   padding-left: var(--espace-5);
+
+}
+section {
+   margin: var(--espace-3);
+   border: 2px solid var(--couleur-texte);
+   padding-left: var(--espace-2);
+}
+h1 {
+   font-size: var(--texte-titre);
+}
+img {
+   height: 100px;
+   border: var(--espace-2) solid var(--couleur-discrete);
+   padding: var(--espace-1);
+   border-radius: var(--espace-1);
+}
+a {
+   text-decoration: none;
+   color: var(--couleur-texte);
+}
+
+@media(min-width: 30rem) {
+   .encadre {
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      gap: var(--espace-5);
+   }
+}
+@media(min-width: 48rem) {
+   .menu {
+      top: 0;
+      bottom: auto;
+
+   }
+   main {
+      padding-top: var(--espace-3);
+      padding-bottom: 0;
+   }
+   #voyon {
+      display: flex;
+   }
+}
