@@ -103,6 +103,18 @@ a {
    text-decoration: none;
    color: var(--couleur-texte);
 }
+#contact {
+   display: flex;
+   flex-direction: column;
+}
+.Contact {
+   list-style: none;
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-start;
+   padding: 0;
+   width: 50%;
+}
 
 @media(min-width: 30rem) {
    .encadre {

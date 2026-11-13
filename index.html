@@ -16,14 +16,17 @@
     <header>
       <nav class="menu">
         <ul class="lien">
-          <li><a href="#" aria-label="Accueil"><span class="icone icone-accueil" aria-hidden="true"></span></a></li>
+          <li><a href="#home" aria-label="Accueil"><span class="icone icone-accueil" aria-hidden="true"></span></a></li>
           <li><a href="#" aria-label="Projets"><span class="icone icone-projets" aria-hidden="true"></span></a></li>
           <li><a href="#" aria-label="Contact"><span class="icone icone-contact" aria-hidden="true"></span></a></li>
           <li><a href="#" aria-label="À propos"><span class="icone icone-info" aria-hidden="true"></span></a></li>
         </ul>
       </nav>
     </header>
+
+
     <main>
+
       <div class="encadre">
         <img src="img/abd.jpg" alt="Lorem">
         <div>
@@ -31,10 +34,12 @@
           <p>Développeur web en formation</p>
         </div>
       </div>
+
       <section>
-          <h2 class="important">présentation</h2>
+          <h2 id="home" class="important">présentation</h2>
           <p class="important" id="tata">Ayant fait une formation en chaudronnerie industrielle, je me suis retrouvé dans un chantier d'insertion en reconditionnement de PC et de fil en aiguille je me retrouve dans une formation qualifiante en développement web</p>
       </section>
+
       <div id="voyon">
         <section>
           <div class="column">
@@ -49,7 +54,32 @@
           </div>
         </section>
       </div>
+
+      <section id="contact">
+        <h2>Contact</h2>
+        <form>
+          <ul class="Contact">
+            <li>
+              <label for="name">Nom : </label>
+              <input type="text" name="user_name" id="name">
+            </li>
+            <li>
+              <label for="mail">E-mail : </label>
+              <input type="email" name="user_mail" id="mail">
+            </li>
+            <li>
+              <label for="msg">Message : </label>
+              <textarea name="user_message" id="msg"></textarea>
+            </li>
+            
+          <button type="submit">Envoyer</button>
+          </ul>
+        </form>
+      </section>
+      
     </main>
+
+
     <footer></footer>
   </body>
 </html>
